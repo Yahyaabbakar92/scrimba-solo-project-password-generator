@@ -53,8 +53,12 @@ hr {
 
 #password-one,
 #password-two {
+	font-family: 'Inter', sans-serif;
+	color: #55f991;
+	text-align: center;
 	background: #273549;
 	height: 40px;
 	width: 220px;
 	border-radius: 6px;
+	padding: 10px 15px;
 }
