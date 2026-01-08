@@ -99,7 +99,19 @@ function generateRandomPasswords() {
 	passwordTwoEl.textContent = characters[randomIndex2];
 }
 
+function generateRandomCharacters() {
+	for (let i = 0; i < characters.length; i++) {
+		let randomCharacters = Math.floor(Math.random() * characters.length);
+		console.log(characters[randomCharacters]);
+	}
+}
+
+// function displayRandomCharacter() {
+
+// }
+
 generateRandomPasswordsBtn.addEventListener('click', generateRandomPasswords);
+
 /* 
 Requirements: 
 - Build it from scratch
