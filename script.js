@@ -11,6 +11,10 @@ Stretch goals:
 - Light mode / Dark mode
 */
 
+let generateRandomPasswordsBtn = document.querySelector('button');
+let passwordOneEl = document.getElementById('password-one');
+let passwordTwoEl = document.getElementById('password-two');
+
 const characters = [
 	'A',
 	'B',
