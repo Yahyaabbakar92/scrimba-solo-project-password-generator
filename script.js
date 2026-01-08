@@ -95,8 +95,8 @@ const characters = [
 function generateRandomPasswords() {
 	let randomIndex1 = Math.floor(Math.random() * characters.length);
 	let randomIndex2 = Math.floor(Math.random() * characters.length);
-	passwordOneEl.textContent = randomIndex1;
-	passwordTwoEl.textContent = randomIndex2;
+	passwordOneEl.textContent = characters[randomIndex1];
+	passwordTwoEl.textContent = characters[randomIndex2];
 }
 
 generateRandomPasswordsBtn.addEventListener('click', generateRandomPasswords);
