@@ -1,16 +1,3 @@
-/* 
-Requirements: 
-- Build it from scratch
-- Generate two random passwords when the user clicks the button
-- Each Password should be 15 characters long
-
-Stretch goals:
-- Ability to set password length (input field)
-- Add a "copy-on-click" feature
-- Toggle options e.g. "symbols" and "numbers" on / off
-- Light mode / Dark mode
-*/
-
 let generateRandomPasswordsBtn = document.querySelector('button');
 let passwordOneEl = document.getElementById('password-one');
 let passwordTwoEl = document.getElementById('password-two');
@@ -104,3 +91,21 @@ const characters = [
 	'/',
 	'|',
 ];
+
+function generateRandomPasswords() {
+	console.log(Math.floor(Math.random() * characters.length));
+}
+
+generateRandomPasswordsBtn.addEventListener('click', generateRandomPasswords);
+/* 
+Requirements: 
+- Build it from scratch
+- Generate two random passwords when the user clicks the button
+- Each Password should be 15 characters long
+
+Stretch goals:
+- Ability to set password length (input field)
+- Add a "copy-on-click" feature
+- Toggle options e.g. "symbols" and "numbers" on / off
+- Light mode / Dark mode
+*/
