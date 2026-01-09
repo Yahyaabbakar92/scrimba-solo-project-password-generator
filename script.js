@@ -91,10 +91,11 @@ const characters = [
 	'/',
 	'|',
 ];
+const passwordLength = 15;
 
-function generatePassword() {
+function generatePassword(length) {
 	let password = '';
-	for (let i = 0; i < 15; i++) {
+	for (let i = 0; i < length; i++) {
 		let randomIndex = Math.floor(Math.random() * characters.length);
 		password += characters[randomIndex];
 	}
@@ -102,8 +103,8 @@ function generatePassword() {
 }
 
 function renderPasswords() {
-	passwordOneEl.textContent = generatePassword();
-	passwordTwoEl.textContent = generatePassword();
+	passwordOneEl.textContent = generatePassword(passwordLength);
+	passwordTwoEl.textContent = generatePassword(passwordLength);
 }
 
 generateBtn.addEventListener('click', renderPasswords);
