@@ -1,4 +1,4 @@
-let generateRandomPasswordsBtn = document.querySelector('button');
+let generateBtn = document.getElementById('generate-btn');
 let passwordOneEl = document.getElementById('password-one');
 let passwordTwoEl = document.getElementById('password-two');
 
@@ -92,25 +92,21 @@ const characters = [
 	'|',
 ];
 
-function generateRandomCharacters() {
-	let randomCharacters = '';
+function generatePassword() {
+	let password = '';
 	for (let i = 0; i < 15; i++) {
 		let randomIndex = Math.floor(Math.random() * characters.length);
-		randomCharacters += characters[randomIndex];
+		password += characters[randomIndex];
 	}
-	return randomCharacters;
+	return password;
 }
 
-function displayRandomCharacters() {
-	passwordOneEl.textContent = generateRandomCharacters();
-	passwordTwoEl.textContent = generateRandomCharacters();
+function renderPasswords() {
+	passwordOneEl.textContent = generatePassword();
+	passwordTwoEl.textContent = generatePassword();
 }
 
-function generateRandomPasswords() {
-	displayRandomCharacters();
-}
-
-generateRandomPasswordsBtn.addEventListener('click', generateRandomPasswords);
+generateBtn.addEventListener('click', renderPasswords);
 
 /* 
 Requirements: 
