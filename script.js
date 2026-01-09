@@ -92,25 +92,23 @@ const characters = [
 	'|',
 ];
 
-function generateRandomPasswords() {
-	let randomIndex1 = Math.floor(Math.random() * characters.length);
-	let randomIndex2 = Math.floor(Math.random() * characters.length);
-	passwordOneEl.textContent = characters[randomIndex1];
-	passwordTwoEl.textContent = characters[randomIndex2];
-}
-
 function generateRandomCharacters() {
-	let text = '';
+	let randomCharacters = '';
 	for (let i = 0; i < 15; i++) {
-		let randomCharacters = Math.floor(Math.random() * characters.length);
-		text += characters[randomCharacters];
+		let randomIndex = Math.floor(Math.random() * characters.length);
+		randomCharacters += characters[randomIndex];
 	}
-	console.log(text);
+	return randomCharacters;
 }
-generateRandomCharacters();
-// function displayRandomCharacter() {
 
-// }
+function displayRandomCharacters() {
+	passwordOneEl.textContent = generateRandomCharacters();
+	passwordTwoEl.textContent = generateRandomCharacters();
+}
+
+function generateRandomPasswords() {
+	displayRandomCharacters();
+}
 
 generateRandomPasswordsBtn.addEventListener('click', generateRandomPasswords);
 
