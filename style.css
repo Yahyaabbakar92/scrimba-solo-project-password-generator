@@ -46,7 +46,7 @@ hr {
 	border: 1px solid #2f3e53;
 }
 
-#passwords-space {
+#passwords {
 	display: flex;
 	justify-content: space-between;
 }
