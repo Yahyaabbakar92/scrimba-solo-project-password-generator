@@ -100,12 +100,14 @@ function generateRandomPasswords() {
 }
 
 function generateRandomCharacters() {
-	for (let i = 0; i < characters.length; i++) {
+	let text = '';
+	for (let i = 0; i < 15; i++) {
 		let randomCharacters = Math.floor(Math.random() * characters.length);
-		console.log(characters[randomCharacters]);
+		text += characters[randomCharacters];
 	}
+	console.log(text);
 }
-
+generateRandomCharacters();
 // function displayRandomCharacter() {
 
 // }
