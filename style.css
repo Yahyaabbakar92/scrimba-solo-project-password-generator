@@ -28,7 +28,13 @@ p {
 	margin-top: 10px;
 }
 
-button {
+#password-control {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+#generate-btn {
 	background: #10b981;
 	font-family: 'Inter', sans-serif;
 	font-size: 16px;
@@ -39,6 +45,23 @@ button {
 	width: 190px;
 	padding: 10px 15px;
 	cursor: pointer;
+}
+#password-options {
+	width: 250px;
+}
+
+input[type='range'] {
+	accent-color: #10b981;
+	cursor: pointer;
+	width: 250px;
+	border-radius: 3px;
+	height: 15px;
+}
+
+label {
+	font-family: 'Inter', sans-serif;
+	font-size: 15px;
+	color: #d5d4d8;
 }
 
 hr {
@@ -58,7 +81,7 @@ hr {
 	text-align: center;
 	background: #273549;
 	height: 40px;
-	width: 220px;
+	width: 250px;
 	border-radius: 6px;
 	padding: 10px 15px;
 }
