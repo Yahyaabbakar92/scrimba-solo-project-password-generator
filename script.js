@@ -1,7 +1,7 @@
 let generateBtn = document.getElementById('generate-btn');
 let passwordOneEl = document.getElementById('password-one');
 let passwordTwoEl = document.getElementById('password-two');
-let passwordLengthEl = document.getElementById('password-length').value;
+let passwordLengthEl = document.getElementById('password-length');
 
 const characters = [
 	'A',
@@ -92,7 +92,11 @@ const characters = [
 	'/',
 	'|',
 ];
-const passwordLength = passwordLengthEl;
+const passwordLength = passwordLengthEl.value;
+
+function getPasswordLength(length) {
+	console.log(length.target.value);
+}
 
 function generatePassword(length) {
 	let password = '';
@@ -109,7 +113,7 @@ function renderPasswords() {
 }
 
 generateBtn.addEventListener('click', renderPasswords);
-
+passwordLengthEl.addEventListener('change', getPasswordLength);
 /* 
 Requirements: 
 - Build it from scratch
