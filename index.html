@@ -25,7 +25,18 @@
 				<span>random password</span></h1
 			>
 			<p>Never use an insecure password again.</p>
-			<button id="generate-btn">Generate passwords</button>
+			<section id="password-control">
+				<button id="generate-btn">Generate passwords</button>
+				<input
+					type="range"
+					name="passwordLength"
+					min="10"
+					max="20"
+					value="15"
+					id="password-length"
+				/>
+				<label for="passwordLength">Password Length</label>
+			</section>
 			<hr />
 			<section id="passwords">
 				<div id="password-one" class="password"></div>
