@@ -1,6 +1,7 @@
 let generateBtn = document.getElementById('generate-btn');
 let passwordOneEl = document.getElementById('password-one');
 let passwordTwoEl = document.getElementById('password-two');
+let passwordLengthEl = document.getElementById('password-length').value;
 
 const characters = [
 	'A',
@@ -91,7 +92,7 @@ const characters = [
 	'/',
 	'|',
 ];
-const passwordLength = 15;
+const passwordLength = passwordLengthEl;
 
 function generatePassword(length) {
 	let password = '';
